@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Video Downloader</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231d4ed8'><path d='M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z'/></svg>" type="image/svg+xml">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                    </svg>
+                </div>
+                <h1>Universal Video Downloader</h1>
+                <p>Download videos from TikTok, YouTube, Instagram, Facebook, X/Twitter, and Pinterest</p>
+            </div>
+
+            <form id="downloadForm" class="form">
+                <div class="input-group">
+                    <label for="urlInput">Video URL</label>
+                    <input 
+                        type="url" 
+                        id="urlInput" 
+                        placeholder="Paste video URL here (e.g., https://www.tiktok.com/@user/video/123...)"
+                        required
+                    >
+                    <div class="input-error" id="urlError"></div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="qualitySelect">Quality</label>
+                        <select id="qualitySelect">
+                            <option value="best">Auto (Best)</option>
+                            <option value="1080p">1080p</option>
+                            <option value="720p">720p</option>
+                            <option value="480p">480p</option>
+                            <option value="360p">360p</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="formatSelect">Format</label>
+                        <select id="formatSelect">
+                            <option value="video">Video (MP4)</option>
+                            <option value="audio">Audio (M4A)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" id="downloadBtn" class="download-btn">
+                    <span class="btn-text">Download</span>
+                    <div class="spinner" id="spinner"></div>
+                </button>
+            </form>
+
+            <div class="alert" id="alertBox"></div>
+
+            <div class="media-info" id="mediaInfo"></div>
+
+            <div class="supported-platforms">
+                <h3>Supported Platforms</h3>
+                <div class="platforms">
+                    <span class="platform">TikTok</span>
+                    <span class="platform">YouTube</span>
+                    <span class="platform">Instagram</span>
+                    <span class="platform">Facebook</span>
+                    <span class="platform">X/Twitter</span>
+                    <span class="platform">Pinterest</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
